@@ -9,6 +9,7 @@ import {
   Entypo,
   EvilIcons,
   MaterialCommunityIcons,
+  Ionicons,
 } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -32,6 +33,9 @@ import {
   RootTabScreenProps,
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import SearchScreen from "../screens/SearchScreen";
+import LibraryScreen from "../screens/LibraryScreen";
+import SpotifyScreen from "../screens/SpotifyScreen";
 
 export default function Navigation({
   colorScheme,
@@ -120,33 +124,33 @@ function BottomTabNavigator() {
           ),
         })}
       />
-      {/* <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+      <BottomTab.Screen
+        name="SearchScreen"
+        component={SearchScreen}
         options={{
           title: "Search",
           tabBarIcon: ({ color }) => (
-            <EvilIcons
-              name="search"
-              size={30}
-              style={{ marginBottom: -3 }}
-              color={color}
-            />
+            <EvilIcons name="search" size={30} color={color} />
           ),
         }}
-      /> */}
+      />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="LibraryScreen"
+        component={LibraryScreen}
         options={{
           title: "Your Library",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="library"
-              size={30}
-              style={{ marginBottom: -3 }}
-              color={color}
-            />
+            <Ionicons name="md-library-sharp" size={30} color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="SpotifyScreen"
+        component={SpotifyScreen}
+        options={{
+          title: "Your Library",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="spotify" size={30} color={color} />
           ),
         }}
       />

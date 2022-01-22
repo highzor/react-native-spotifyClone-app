@@ -34,6 +34,12 @@ export type RootTabParamList = {
   SpotifyScreen: undefined;
 };
 
+export type Album = {
+  id: string;
+  imageUri: string;
+  artistsHeadLine: string;
+};
+
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
   CompositeScreenProps<
     BottomTabScreenProps<RootTabParamList, Screen>,

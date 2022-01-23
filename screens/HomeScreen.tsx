@@ -35,6 +35,11 @@ const albumCategory = {
       imageUri: "https://i.ytimg.com/vi/8RGEvivKlNk/maxresdefault.jpg",
       artistsHeadLine: "Enjoii",
     },
+    {
+      id: "6",
+      imageUri: "https://i.ytimg.com/vi/AxVVQNBnhmw/maxresdefault.jpg",
+      artistsHeadLine: "Виктор Цой",
+    },
   ],
 };
 

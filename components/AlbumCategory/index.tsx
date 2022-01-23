@@ -6,12 +6,12 @@ import styles from "./styles";
 
 export type AlbumCategoryProps = {
   title: string;
-  albums: [Album];
+  albums: Album[];
 };
 
 const AlbumCategory = (props: AlbumCategoryProps) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>{props.title}</Text>
       <FlatList
         data={props.albums}

@@ -36,6 +36,7 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import SearchScreen from "../screens/SearchScreen";
 import LibraryScreen from "../screens/LibraryScreen";
 import SpotifyScreen from "../screens/SpotifyScreen";
+import AlbumScreen from "../screens/AlbumScreen";
 
 export default function Navigation({
   colorScheme,
@@ -70,6 +71,13 @@ function RootNavigator() {
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
+      />
+      <Stack.Screen
+        name="AlbumScreen"
+        component={AlbumScreen}
+        options={{
+          headerTitle: "Album",
+        }}
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -148,7 +156,7 @@ function BottomTabNavigator() {
         name="SpotifyScreen"
         component={SpotifyScreen}
         options={{
-          title: "Your Library",
+          title: "Spotify",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="spotify" size={30} color={color} />
           ),

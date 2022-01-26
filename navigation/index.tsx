@@ -18,6 +18,7 @@ import {
   DarkTheme,
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName, Pressable } from "react-native";
 
@@ -72,13 +73,6 @@ function RootNavigator() {
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
       />
-      <Stack.Screen
-        name="AlbumScreen"
-        component={AlbumScreen}
-        options={{
-          headerTitle: "Album",
-        }}
-      />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
@@ -103,6 +97,21 @@ function BottomTabNavigator() {
       }}
     >
       <BottomTab.Screen
+        name="Home"
+        component={TabOneNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Entypo
+              name="home"
+              size={30}
+              style={{ marginBottom: -3 }}
+              color={color}
+            />
+          ),
+          headerShown: false,
+        }}
+      />
+      {/* <BottomTab.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<"HomeScreen">) => ({
@@ -131,7 +140,7 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
-      />
+      /> */}
       <BottomTab.Screen
         name="SearchScreen"
         component={SearchScreen}
@@ -163,6 +172,27 @@ function BottomTabNavigator() {
         }}
       />
     </BottomTab.Navigator>
+  );
+}
+
+const TabOneStack = createStackNavigator<RootStackParamList>();
+
+function TabOneNavigator() {
+  return (
+    <TabOneStack.Navigator>
+      <TabOneStack.Screen
+        name="TabOneScreen"
+        component={HomeScreen}
+        options={{ headerTitle: "Home" }}
+        //options={{ headerShown: false }}
+      />
+
+      <TabOneStack.Screen
+        name="AlbumScreen"
+        component={AlbumScreen}
+        options={{ headerTitle: "Album" }}
+      />
+    </TabOneStack.Navigator>
   );
 }
 

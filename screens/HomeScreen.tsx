@@ -9,11 +9,6 @@ export default function HomeScreen({
 }: RootTabScreenProps<"HomeScreen">) {
   return (
     <View style={styles.container}>
-      {/* <AlbumView album={album} /> */}
-      {/* <AlbumCategory
-        title={albumCategory.title}
-        albums={albumCategory.albums}
-      /> */}
       <FlatList
         data={albumCategories}
         renderItem={({ item }) => (

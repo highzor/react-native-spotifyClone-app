@@ -12,27 +12,27 @@ const styles = StyleSheet.create({
     },
     name: {
         color: 'white',
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold'
     },
     creatorContainer: {
         flexDirection: 'row',
-        margin: 5
+        margin: 4
     },
     creator: {
         color: 'lightgray',
         margin: 5,
-        fontSize: 20,
+        fontSize: 18,
     },
     likes: {
         color: 'lightgray',
         margin: 5,
-        fontSize: 20
+        fontSize: 18
     },
     button: {
         backgroundColor: '#1CD05D',
-        height: 50,
-        width: 175,
+        height: 40,
+        width: 150,
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center'
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 18
     },
 });
 

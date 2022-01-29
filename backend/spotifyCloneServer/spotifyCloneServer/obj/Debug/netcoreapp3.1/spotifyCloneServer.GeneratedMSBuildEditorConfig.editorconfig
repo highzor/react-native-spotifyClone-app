@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = spotifyCloneServer
+build_property.ProjectDir = /Users/alexandr/Documents/ReactNative/projects/sporifyClone/backend/spotifyCloneServer/spotifyCloneServer/
